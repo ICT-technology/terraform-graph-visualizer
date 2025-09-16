@@ -16,25 +16,6 @@ A powerful command-line tool that visualizes Terraform dependency graphs directl
 **Color-Coded Output** - Easy-to-read colored terminal output  
 **Pipe Support** - Works directly with `terraform graph` output  
 
-## Installation
-
-1. Download the script:
-```bash
-curl -o terraform-graph-visualizer.sh https://raw.githubusercontent.com/your-repo/terraform-graph-visualizer/main/terraform-graph-visualizer.sh
-```
-
-2. Make it executable:
-```bash
-chmod +x terraform-graph-visualizer.sh
-```
-
-3. Optional: Move to your PATH:
-```bash
-sudo mv terraform-graph-visualizer.sh /usr/local/bin/
-# or
-mv terraform-graph-visualizer.sh ~/bin/
-```
-
 ## Usage
 
 ### Method 1: Direct Pipe (Recommended)
