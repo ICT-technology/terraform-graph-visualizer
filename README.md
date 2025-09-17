@@ -16,25 +16,6 @@ A powerful command-line tool that visualizes Terraform dependency graphs directl
 **Color-Coded Output** - Easy-to-read colored terminal output  
 **Pipe Support** - Works directly with `terraform graph` output  
 
-## Installation
-
-1. Download the script:
-```bash
-curl -o terraform-graph-visualizer.sh https://raw.githubusercontent.com/your-repo/terraform-graph-visualizer/main/terraform-graph-visualizer.sh
-```
-
-2. Make it executable:
-```bash
-chmod +x terraform-graph-visualizer.sh
-```
-
-3. Optional: Move to your PATH:
-```bash
-sudo mv terraform-graph-visualizer.sh /usr/local/bin/
-# or
-mv terraform-graph-visualizer.sh ~/bin/
-```
-
 ## Usage
 
 ### Method 1: Direct Pipe (Recommended)
@@ -125,9 +106,9 @@ terraform graph | terraform-graph-visualizer.sh > infrastructure-report.txt
 
 ## Supported Terraform Versions
 
-- Terraform 1.0+
+- Terraform 1.0+ (untested)
 - Terraform 1.10+ (latest features)
-- OpenTofu (partial support)
+
 
 ## Advanced Usage
 
@@ -145,50 +126,6 @@ terraform graph | terraform-graph-visualizer.sh > analysis-$(date +%Y%m%d).txt
 ```bash
 terraform graph | terraform-graph-visualizer.sh | tee infrastructure-overview.txt
 ```
-
-## Troubleshooting
-
-### Common Issues
-
-**"No modules found"**
-- Your Terraform configuration might not use modules
-- Check if you're in the correct Terraform directory
-
-**"Cannot read input data"**
-- Ensure `terraform graph` produces valid output
-- Check that Terraform is properly initialized (`terraform init`)
-
-**Empty dependency sections**
-- This is normal for simple configurations
-- Complex infrastructures will show more relationships
-
-### Debug Mode
-For troubleshooting, you can inspect the raw graph:
-```bash
-terraform graph > debug.dot
-cat debug.dot  # Inspect raw graph data
-terraform-graph-visualizer.sh debug.dot
-```
-
-## Contributing
-
-We welcome contributions! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Add tests for new functionality  
-4. Ensure all existing tests pass
-5. Submit a pull request
-
-## Changelog
-
-### v1.0.0
-- Initial release with core visualization features
-- Support for stdin and file input
-- Module and dependency analysis
-- Color-coded terminal output
-
----
 
 ## Support 
 For issues, questions, or contributions, please contact:
